@@ -1,0 +1,8 @@
+{
+  "name": "shared-nested",
+  "private": true,
+  "dependencies": {
+    "shared": "workspace:*"
+  },
+  "main": "index.js"
+}

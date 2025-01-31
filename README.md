@@ -1,8 +1,6 @@
 # Pnpm shared-workspace-lockfile=false prune
 
-Analogue of [turbo prune --docker](https://turbo.build/repo/docs/guides/tools/docker#the---docker-flag), but for pnpm with shared-workspace-lockfile=false.
-
-Currently is not supported by turbo
+Analogue of [turbo prune --docker](https://turbo.build/repo/docs/guides/tools/docker#the---docker-flag), but for pnpm with shared-workspace-lockfile=false that currently don't [supported by turbo](https://github.com/vercel/turborepo/issues/3541).
 
 ## Usage
 

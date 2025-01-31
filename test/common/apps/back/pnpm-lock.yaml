@@ -1,0 +1,31 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  injected-shared:
+    specifier: workspace:*
+    version: file:../../packages/injected-shared
+  shared:
+    specifier: workspace:*
+    version: link:../../packages/shared
+
+devDependencies:
+  types-back:
+    specifier: workspace:*
+    version: link:../../packages/types-back
+
+dependenciesMeta:
+  injected-shared:
+    injected: true
+
+packages:
+
+  file:../../packages/injected-shared:
+    resolution: {directory: ../../packages/injected-shared, type: directory}
+    name: injected-shared
+    dependencies:
+      shared: link:../../packages/shared
+    dev: false

@@ -1,0 +1,8 @@
+{
+  "name": "util-cli",
+  "private": true,
+  "main": "index.js",
+  "bin": {
+    "util-cli": "./index.js"
+  }
+}

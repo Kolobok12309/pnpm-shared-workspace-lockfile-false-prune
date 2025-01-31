@@ -1,0 +1,17 @@
+{
+  "name": "front",
+  "private": true,
+  "dependencies": {
+    "shared": "workspace:*",
+    "injected-shared": "workspace:*"
+  },
+  "dependenciesMeta": {
+    "injected-shared": {
+      "injected": true
+    }
+  },
+  "devDependencies": {
+    "types-front": "workspace:*",
+    "util-cli": "workspace:*"
+  }
+}

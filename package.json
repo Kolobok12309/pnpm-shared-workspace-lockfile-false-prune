@@ -7,7 +7,7 @@
     "exec": "node dist/bin.cjs",
     "build": "unbuild",
     "prepare": "unbuild",
-    "test": "echo 'Add tests'",
+    "test": "vitest run",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write ."
   },
