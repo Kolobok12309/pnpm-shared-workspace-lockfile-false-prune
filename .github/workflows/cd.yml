@@ -5,6 +5,8 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  workflow_dispatch:
+
   release:
     types: [published]
 
@@ -13,6 +15,7 @@ jobs:
     name: Npm deploy
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    environment: prod
     permissions:
       contents: read
       id-token: write
@@ -26,6 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
