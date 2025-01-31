@@ -1,0 +1,22 @@
+name: Create release
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    name: Process version
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Process version
+        uses: googleapis/release-please-action@v4
