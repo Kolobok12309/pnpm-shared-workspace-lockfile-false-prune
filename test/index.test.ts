@@ -56,7 +56,7 @@ describe.each(['common', 'hoists'])(
 
         if (workspace === 'front') {
           await expect(
-            execAsync('util-cli', {
+            execAsync('./node_modules/.bin/util-cli', {
               cwd: resolve(outJsonPath, `apps/${workspace}`),
             }),
             'Success run binary',
@@ -109,7 +109,7 @@ describe.each(['common', 'hoists'])(
         await prunerForTmp.postPrune(false);
 
         if (workspace === 'front') {
-          await execAsync('util-cli', {
+          await execAsync('./node_modules/.bin/util-cli', {
             cwd: resolve(tmpPath, `apps/${workspace}`),
           });
         }
