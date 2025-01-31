@@ -1,0 +1,61 @@
+{
+  "name": "pnpm-shared-workspace-lockfile-false-prune",
+  "version": "1.0.0",
+  "description": "Analogue of turbo prune --docker, but for pnpm with shared-workspace-file=false",
+  "type": "module",
+  "scripts": {
+    "exec": "node dist/bin.cjs",
+    "build": "unbuild",
+    "prepack": "unbuild",
+    "test": "echo 'Add tests'"
+  },
+  "packageManager": "pnpm@8.9.2",
+  "keywords": [
+    "pnpm",
+    "shared-workspace-lockfile",
+    "prune",
+    "turbo"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Dmitriy",
+    "email": "sova123409@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Kolobok12309/pnpm-shared-workspace-lockfile-false-prune/issues"
+  },
+  "homepage": "https://github.com/Kolobok12309/pnpm-shared-workspace-lockfile-false-prune#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kolobok12309/pnpm-shared-workspace-lockfile-false-prune.git"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/node": "^22.12.0",
+    "@types/yargs": "^17.0.33",
+    "unbuild": "^3.3.1",
+    "vitest": "^3.0.4"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "pnpm-shared-workspace-lockfile-false-prune": "./dist/bin.cjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "dependencies": {
+    "@pnpm/find-workspace-dir": "^1000.0.2",
+    "@pnpm/find-workspace-packages": "^6.0.9",
+    "debug": "^4.4.0",
+    "yargs": "^17.7.2"
+  }
+}
