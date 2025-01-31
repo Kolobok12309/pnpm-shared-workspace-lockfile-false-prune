@@ -28,6 +28,9 @@ devDependencies:
   '@types/yargs':
     specifier: ^17.0.33
     version: 17.0.33
+  prettier:
+    specifier: ^3.4.2
+    version: 3.4.2
   unbuild:
     specifier: ^3.3.1
     version: 3.3.1(typescript@5.7.3)
@@ -2664,6 +2667,12 @@ packages:
       nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
+    dev: true
+
+  /prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /pretty-bytes@5.6.0:

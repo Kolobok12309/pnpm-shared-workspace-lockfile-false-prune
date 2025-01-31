@@ -1,0 +1,8 @@
+{
+  "name": "injected-shared",
+  "private": true,
+  "dependencies": {
+    "shared": "workspace:*"
+  },
+  "main": "index.js"
+}

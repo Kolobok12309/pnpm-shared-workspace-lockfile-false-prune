@@ -40,7 +40,10 @@ export class PnpmPruner {
 
     const root = await findWorkspaceDir(this.cwd);
 
-    if (!root) throw new Error(`[pnpm-shared-workspace-lockfile-false-prune] Monorepo root not found`);
+    if (!root)
+      throw new Error(
+        `[pnpm-shared-workspace-lockfile-false-prune] Monorepo root not found`,
+      );
 
     this.debug(`Found monorepo root in "${root}"`);
 
@@ -51,9 +54,13 @@ export class PnpmPruner {
     const rootPackage = this.packages.find(({ dir }) => dir === root);
 
     if (!targetPackage)
-      throw new Error(`[pnpm-shared-workspace-lockfile-false-prune] Target workspace not found`);
+      throw new Error(
+        `[pnpm-shared-workspace-lockfile-false-prune] Target workspace not found`,
+      );
     if (!rootPackage)
-      throw new Error(`[pnpm-shared-workspace-lockfile-false-prune] Monorepo manifest not found`);
+      throw new Error(
+        `[pnpm-shared-workspace-lockfile-false-prune] Monorepo manifest not found`,
+      );
 
     this.targetPackage = targetPackage;
     this.rootPackage = rootPackage;
@@ -71,8 +78,16 @@ export class PnpmPruner {
   }
 
   async prune(out: string) {
-    if (!this.packages || !this.rootPackage || !this.targetPackage || !this.dependencyTree || !this.dependenciesList)
-      throw new Error('[pnpm-shared-workspace-lockfile-false-prune] Pruner not initialized');
+    if (
+      !this.packages ||
+      !this.rootPackage ||
+      !this.targetPackage ||
+      !this.dependencyTree ||
+      !this.dependenciesList
+    )
+      throw new Error(
+        '[pnpm-shared-workspace-lockfile-false-prune] Pruner not initialized',
+      );
 
     this.debug(
       `Run prune for ${this.workspace} from cwd ${this.cwd} with out ${out}`,
@@ -128,8 +143,16 @@ export class PnpmPruner {
   }
 
   async postPrune(fullInjected: boolean) {
-    if (!this.packages || !this.rootPackage || !this.targetPackage || !this.dependencyTree || !this.dependenciesList)
-      throw new Error('[pnpm-shared-workspace-lockfile-false-prune] Pruner not initialized');
+    if (
+      !this.packages ||
+      !this.rootPackage ||
+      !this.targetPackage ||
+      !this.dependencyTree ||
+      !this.dependenciesList
+    )
+      throw new Error(
+        '[pnpm-shared-workspace-lockfile-false-prune] Pruner not initialized',
+      );
 
     this.debug('Start copy nested dependencies', fullInjected);
     // Необходимо чтобы для full-project докопировать все файлы

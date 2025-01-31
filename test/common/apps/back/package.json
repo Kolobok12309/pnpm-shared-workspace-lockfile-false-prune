@@ -1,0 +1,16 @@
+{
+  "name": "back",
+  "private": true,
+  "dependencies": {
+    "shared": "workspace:*",
+    "injected-shared": "workspace:*"
+  },
+  "dependenciesMeta": {
+    "injected-shared": {
+      "injected": true
+    }
+  },
+  "devDependencies": {
+    "types-back": "workspace:*"
+  }
+}
