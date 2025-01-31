@@ -6,7 +6,7 @@ concurrency:
 
 on:
   push:
-    branches: [master]
+    branches: [ci/init-ci]
 
 permissions:
   contents: write
@@ -20,3 +20,5 @@ jobs:
     steps:
       - name: Process version
         uses: googleapis/release-please-action@v4
+        with:
+          target-branch: ci/init-ci
