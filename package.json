@@ -6,7 +6,7 @@
   "scripts": {
     "exec": "node dist/bin.cjs",
     "build": "unbuild",
-    "prepack": "unbuild",
+    "prepare": "unbuild",
     "test": "echo 'Add tests'"
   },
   "packageManager": "pnpm@8.9.2",
