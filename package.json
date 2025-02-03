@@ -1,6 +1,6 @@
 {
   "name": "pnpm-shared-workspace-lockfile-false-prune",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Analogue of turbo prune --docker, but for pnpm with shared-workspace-lockfile=false",
   "type": "module",
   "scripts": {
